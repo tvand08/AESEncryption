@@ -84,7 +84,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/Users/tvand/source/repos/AESEncryption/constansts.h">
+			<Option target="AESEncryption"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/tvand/source/repos/AESEncryption/main.cpp">
+			<Option target="AESEncryption"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/tvand/source/repos/AESEncryption/main.h">
 			<Option target="AESEncryption"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/tvand/source/repos/AESEncryption/CMakeLists.txt">

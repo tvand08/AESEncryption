@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/tvand/source/repos/AESEncryption/main.cpp
+iostream
+-
+cstring
+-
+main.h
+/mnt/c/Users/tvand/source/repos/AESEncryption/main.h
+
+/mnt/c/Users/tvand/source/repos/AESEncryption/main.h
+
