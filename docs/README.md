@@ -3,7 +3,7 @@
 ## Contributors
 
 - Trevor Vanderee (@tvand08)
-- Patrick Deshwal ()
+- Patrick Deshwal (@patrickdes96)
 
 ## Institution
 
