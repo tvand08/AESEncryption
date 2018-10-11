@@ -1,4 +1,4 @@
-# AES Encryption Algorithm in parallel
+# AES Encryption Algorithm
 
 ## Contributors
 
@@ -15,7 +15,7 @@ COSC 3P93 - Parallel Computing
 
 ## Description
 
-This project is an implementation of the **Advanced Encryption Standard** (AES) Encryption algorithm in parallel.
+This project is an implementation of the **Advanced Encryption Standard** (AES) Encryption algorithm.
 
 ## Implementation Language
 
