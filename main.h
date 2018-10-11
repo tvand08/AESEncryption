@@ -9,10 +9,16 @@
 
 unsigned char get_sbox_value(unsigned char val);
 
-unsigned char* generate_roundkey(char* key, int round);
+unsigned char* generate_roundkey(unsigned char* key, int round);
 
-unsigned char* d_rotate_word(unsigned char* key,int word_number);
+void enc_rotate_word(unsigned char key[4]);
 
-unsigned char* d_sub_words(unsigned char* key, int word_number);
+void enc_sub_words(unsigned char* key);
 
-unsigned char* extract_word(unsigned char* key, int column_number);
+void extract_word(unsigned char* key, int word_number, unsigned char* result);
+
+void insert_word(unsigned char* insert, int word_number, unsigned char* key);
+
+void exclusive_or(unsigned char* target, unsigned char* against);
+
+

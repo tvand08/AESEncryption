@@ -7,34 +7,41 @@
 int main() {
 
     std::string message;
-    char key[32*11];
+
+    // 128 bit key = 16 bytes per key | 11 generated keys
+    unsigned char key[16 * 11];
 
     //Read message
-    std::cout<< "Enter the message you would like to encrypt:" << std::endl;
+//    std::cout<< "Enter the key for the cipher" << std::endl;
 //    std::cin >> message;
 
     //Message Length
-    int message_length = message.length();
+//    int message_length = message.length();
 
     //Make new char array for the size of string submitted
-    char message_bytes[message_length+1];
+//    char message_bytes[message_length+1];
 
     //Convert string to char array
-    std::strcpy(message_bytes,message.c_str());
+//    std::strcpy(message_bytes,message.c_str());
 
     //Read key
-    std::cout << "Enter a key with which you would like to encrypt the message" << std::endl;
-//    std::cin>>key;
-
-    unsigned char test[] = "abcdefghijklmnopqrstuvwxyz123456";
-//    unsigned char* result = d_rotate_word(test,0);
-//    unsigned char* result2 = d_sub_words(test,0);
-    for(int i = 0 ; i< 7; i++){
-        unsigned char* result3 = extract_word(test, i);
-        std::cout<<std::endl;
+    char input[17];
+    std::cout << "Enter a key with which you would like to encrypt the message (16 characters)" << std::endl;
+    std::cin.getline(input,17);
+    for(int i = 0; i < 16; i++){
+        key[i] = (unsigned char)input[i];
     }
 
-//    std::cout<<result3<<std::endl;
+    for(int i = 0; i< 10; i++){
+        generate_roundkey(key, i);
+    }
+
+    for(int i=0; i < 11*16; i++){
+        if((int)key[i]<16)
+            std::cout<<"0";
+
+        std::cout << std::hex << (int)key[i];
+    }
 
 }
 
@@ -44,34 +51,67 @@ unsigned char get_sbox_value(unsigned char val){
     return s_box[loc];
 }
 
-// Will need a total of 11 for 128 bit encryption
-unsigned char* generate_roundkey(char* key, int round){
-    for(int round = 0; round < 11; round++){
+unsigned char* generate_roundkey(unsigned char* key, int round){
+            unsigned char word[4];
+            unsigned char xor_res[4];
 
+            extract_word(key, round*4 + 3, word);
+
+            enc_rotate_word(word);
+            enc_sub_words(word);
+            extract_word(key, round*4, xor_res);
+            exclusive_or(word,xor_res);
+
+            word[0] = word[0] ^ r_con[round];
+
+            insert_word(word, round*4 + 4, key);
+
+        for(int i = 1; i<4; i++){
+            unsigned char word_loop[4];
+            unsigned char xor_res_loop[4];
+
+            extract_word(key, (round)*4 + i + 3, word_loop);
+            extract_word(key, (round)*4 + i, xor_res_loop);
+
+            exclusive_or(word_loop,xor_res_loop);
+
+            insert_word(word_loop, round*4 + i + 4, key);
+        }
+    return key;
+}
+
+
+void exclusive_or(unsigned char* target, unsigned char* against){
+    for(int i = 0; i < 4; i++){
+        target[i] = target[i] ^ against[i];
     }
 }
 
-unsigned char* extract_word(unsigned char* key, int column_number){
-    unsigned char result[4];
-    int offset = (column_number / 4)*16 + column_number%4;
-    std::cout<<offset<<std::endl;
+void insert_word(unsigned char* insert, int word_number, unsigned char* key){
+    int offset = word_number*4;
+
     for(int i = 0; i< 4; i++){
-        result[i] = key[(4*i) + offset];
-        std::cout<<i<< " is "<<result[i]<<std::endl;
+        key[i + offset] = insert[i];
     }
 }
 
-unsigned char* d_rotate_word(unsigned char* key){
+void extract_word(unsigned char* key, int word_number, unsigned char* result){
+    int offset = word_number*4;
+
+    for(int i = 0; i< 4; i++){
+        result[i] = key[i + offset];
+    }
+}
+
+void enc_rotate_word(unsigned char* key){
     unsigned char temp = key[0];
     key[0] = key[1];
     key[1] = key[2];
     key[2] = key[3];
     key[3] = temp;
-
-    return key;
 }
 
-unsigned char* d_sub_words(unsigned char* key, int word_number){
+void enc_sub_words(unsigned char* key){
     for(int i = 0 ; i < 4; i++){
         key[i] = get_sbox_value(key[i]);
     }
