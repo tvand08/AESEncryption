@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/Users/tvand/source/repos/AESEncryption/constansts.h
+/mnt/c/Users/tvand/source/AESEncryption/constansts.h
 
-/mnt/c/Users/tvand/source/repos/AESEncryption/main.cpp
+/mnt/c/Users/tvand/source/AESEncryption/main.cpp
 iostream
 -
 cstring
 -
 constansts.h
-/mnt/c/Users/tvand/source/repos/AESEncryption/constansts.h
+/mnt/c/Users/tvand/source/AESEncryption/constansts.h
 main.h
-/mnt/c/Users/tvand/source/repos/AESEncryption/main.h
+/mnt/c/Users/tvand/source/AESEncryption/main.h
 
-/mnt/c/Users/tvand/source/repos/AESEncryption/main.h
+/mnt/c/Users/tvand/source/AESEncryption/main.h
 

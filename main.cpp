@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 #include "constansts.h"
 #include "main.h"
@@ -8,8 +9,9 @@ int main() {
     // 128 bit key = 16 bytes per key | 11 generated keys
     unsigned char key[16 * 11];
     unsigned char text[16] = {0};
+    unsigned char result[2560] = {0};
     char key_input[17];
-    char msg_input[17];
+    char msg_input[2561] ={'='};
 
     // Read key into key input
     std::cout << "Enter a key with which you would like to encrypt the message (16 characters)" ;
@@ -21,49 +23,64 @@ int main() {
     }
 
     // Read the message into the message input
-    std::cout<<"Enter a message to encrypt"<<std::endl;
-    std::cin.getline(msg_input,17);
+    std::cout<<"Enter a message to encrypt (max 256 characters)"<<std::endl;
+    std::cin.getline(msg_input,2561);
 
-    // Move the message into the unsigned char array
-    for(int i = 0; i < 16; i++){
-        text[i] = (unsigned char)msg_input[i];
+    int message_length = 0;
+    while(msg_input[message_length] != '\000'){ message_length++; }
+
+    int num_blocks = (message_length / 16) + 1;
+
+    for(int j = 0; j < num_blocks; j++){
+
+        // Move the current message into the unsigned char array
+        for(int i = (j*16); i < (j+1)*16; i++){
+            text[i%16] = (unsigned char)msg_input[i];
+        }
+
+
+        // Generate the round keys from the cipher key
+        for(int i = 0; i< 10; i++){
+            generate_roundkey(key,i);
+        }
+
+        //Begin encryption
+
+        // Add cipher key to cipher text
+        exclusive_or(text , &key[0], 16);
+
+        /* Perform the 9 rounds of encryption
+         * For each round algorithm will
+         * 1. Sub out the bytes using the Rijndael s-box
+         * 2. Shift the rows of the cipher text
+         * 3. Mix up the columns using a fixed matrix
+         *    and galois field multiplication
+         * 4. Add the round key for the given round to
+         *    the cipher text
+         */
+        for(int i  = 1; i < 10; i++ ){
+           enc_sub_bytes(text);
+           enc_shift_rows(text);
+           enc_mix_columns(text);
+           exclusive_or(text, &key[i*16],16);
+        }
+
+        // Sub the bytes with the s-box
+        enc_sub_bytes(text);
+        // Shift the rows once more
+        enc_shift_rows(text);
+        // Add the final round key to the cipher text
+        exclusive_or(text, &key[10*16], 16);
+
+        for(int i = (j*16); i < (j+1)*16; i++){
+            result[i] = text[i%16];
+        }
+        std::cout<<"Encrypting Block "<<j<<std::endl;
+        print_hex(text,16);
     }
-
-    // Generate the round keys from the cipher key
-    for(int i = 0; i< 10; i++){
-        generate_roundkey(key,i);
-    }
-
-    //Begin encryption
-
-    // Add cipher key to cipher text
-    exclusive_or(text , &key[0], 16);
-
-    /* Perform the 9 rounds of encryption
-     * For each round algorithm will
-     * 1. Sub out the bytes using the Rijndael s-box
-     * 2. Shift the rows of the cipher text
-     * 3. Mix up the columns using a fixed matrix
-     *    and galois field multiplication
-     * 4. Add the round key for the given round to
-     *    the cipher text
-     */
-    for(int i  = 1; i < 10; i++ ){
-       enc_sub_bytes(text);
-       enc_shift_rows(text);
-       enc_mix_columns(text);
-       exclusive_or(text, &key[i*16],16);
-    }
-
-    // Sub the bytes with the s-box
-    enc_sub_bytes(text);
-    // Shift the rows once more
-    enc_shift_rows(text);
-    // Add the final round key to the cipher text
-    exclusive_or(text, &key[10*16], 16);
 
     // Print out the finalized cipher text
-    print_hex(text,16);
+    print_hex(result,num_blocks*16);
 }
 
 // Shared methods

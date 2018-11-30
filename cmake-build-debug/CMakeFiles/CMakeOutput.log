@@ -1,4 +1,4 @@
-The system is: Linux - 4.4.0-17134-Microsoft - x86_64
+The system is: Linux - 4.4.0-43-Microsoft - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/3.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1e3d1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1e3d1.dir/build.make CMakeFiles/cmTC_1e3d1.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1e3d1.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_1e3d1.dir/testCCompiler.c.o   -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_1e3d1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1e3d1.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_1e3d1.dir/testCCompiler.c.o  -o cmTC_1e3d1 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0d0ac/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0d0ac.dir/build.make CMakeFiles/cmTC_0d0ac.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0d0ac.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_0d0ac.dir/testCCompiler.c.o   -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_0d0ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d0ac.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_0d0ac.dir/testCCompiler.c.o  -o cmTC_0d0ac 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_156dd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_156dd.dir/build.make CMakeFiles/cmTC_156dd.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_156dd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_156dd.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o  -o cmTC_156dd 
+Run Build Command:"/usr/bin/make" "cmTC_e7528/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7528.dir/build.make CMakeFiles/cmTC_e7528.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_e7528
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7528.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o  -o cmTC_e7528 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_156dd' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoCzQ0V.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_156dd /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_156dd' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7528' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cckI6shi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7528 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7528' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_156dd/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_156dd.dir/build.make CMakeFiles/cmTC_156dd.dir/build]
-  ignore line: [make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_156dd]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_156dd.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o  -o cmTC_156dd ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_e7528/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_e7528.dir/build.make CMakeFiles/cmTC_e7528.dir/build]
+  ignore line: [make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_e7528]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7528.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o  -o cmTC_e7528 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_156dd' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccoCzQ0V.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_156dd /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7528' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cckI6shi.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7528 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccoCzQ0V.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cckI6shi.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_156dd] ==> ignore
+    arg [cmTC_e7528] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_156dd.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_e7528.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -157,17 +157,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a6f74/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a6f74.dir/build.make CMakeFiles/cmTC_a6f74.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a6f74.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_a6f74.dir/feature_tests.c.o   -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_a6f74
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6f74.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_a6f74.dir/feature_tests.c.o  -o cmTC_a6f74 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_15e09/fast"
+/usr/bin/make -f CMakeFiles/cmTC_15e09.dir/build.make CMakeFiles/cmTC_15e09.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15e09.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_15e09.dir/feature_tests.c.o   -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_15e09
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15e09.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_15e09.dir/feature_tests.c.o  -o cmTC_15e09 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -177,17 +177,17 @@ make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f4527/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f4527.dir/build.make CMakeFiles/cmTC_f4527.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f4527.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_f4527.dir/feature_tests.c.o   -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_f4527
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4527.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_f4527.dir/feature_tests.c.o  -o cmTC_f4527 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_3216d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3216d.dir/build.make CMakeFiles/cmTC_3216d.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3216d.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_3216d.dir/feature_tests.c.o   -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3216d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3216d.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_3216d.dir/feature_tests.c.o  -o cmTC_3216d 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -197,17 +197,17 @@ make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4c0d0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4c0d0.dir/build.make CMakeFiles/cmTC_4c0d0.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4c0d0.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_4c0d0.dir/feature_tests.c.o   -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_4c0d0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c0d0.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_4c0d0.dir/feature_tests.c.o  -o cmTC_4c0d0 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_bf1b5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bf1b5.dir/build.make CMakeFiles/cmTC_bf1b5.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bf1b5.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_bf1b5.dir/feature_tests.c.o   -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_bf1b5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf1b5.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_bf1b5.dir/feature_tests.c.o  -o cmTC_bf1b5 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -215,30 +215,30 @@ make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f037c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f037c.dir/build.make CMakeFiles/cmTC_f037c.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f037c.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f037c.dir/testCXXCompiler.cxx.o -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_f037c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f037c.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f037c.dir/testCXXCompiler.cxx.o  -o cmTC_f037c 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_e624e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e624e.dir/build.make CMakeFiles/cmTC_e624e.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e624e.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_e624e.dir/testCXXCompiler.cxx.o -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_e624e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e624e.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_e624e.dir/testCXXCompiler.cxx.o  -o cmTC_e624e 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f0308/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f0308.dir/build.make CMakeFiles/cmTC_f0308.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_f0308
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0308.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f0308 
+Run Build Command:"/usr/bin/make" "cmTC_443ae/fast"
+/usr/bin/make -f CMakeFiles/cmTC_443ae.dir/build.make CMakeFiles/cmTC_443ae.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_443ae
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_443ae.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_443ae 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,24 +250,24 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0308' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdwTIsq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f0308 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0308' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_443ae' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgXWbke.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_443ae /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_443ae' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_f0308/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_f0308.dir/build.make CMakeFiles/cmTC_f0308.dir/build]
-  ignore line: [make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_f0308]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0308.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_f0308 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_443ae/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_443ae.dir/build.make CMakeFiles/cmTC_443ae.dir/build]
+  ignore line: [make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_443ae]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_443ae.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_443ae ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f0308' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccdwTIsq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_f0308 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_443ae' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgXWbke.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_443ae /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccdwTIsq.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccgXWbke.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_f0308] ==> ignore
+    arg [cmTC_443ae] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_f0308.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_443ae.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,17 +342,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f85a0/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f85a0.dir/build.make CMakeFiles/cmTC_f85a0.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f85a0.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_f85a0.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f85a0
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f85a0.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_f85a0.dir/feature_tests.cxx.o  -o cmTC_f85a0 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a2066/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2066.dir/build.make CMakeFiles/cmTC_a2066.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a2066.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_a2066.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_a2066
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2066.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_a2066.dir/feature_tests.cxx.o  -o cmTC_a2066 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -415,17 +415,17 @@ make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a9610/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a9610.dir/build.make CMakeFiles/cmTC_a9610.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_a9610.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_a9610.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_a9610
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9610.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_a9610.dir/feature_tests.cxx.o  -o cmTC_a9610 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_48724/fast"
+/usr/bin/make -f CMakeFiles/cmTC_48724.dir/build.make CMakeFiles/cmTC_48724.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_48724.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_48724.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_48724
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48724.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_48724.dir/feature_tests.cxx.o  -o cmTC_48724 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -488,17 +488,17 @@ make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7f6d3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7f6d3.dir/build.make CMakeFiles/cmTC_7f6d3.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7f6d3.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_7f6d3.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7f6d3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f6d3.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_7f6d3.dir/feature_tests.cxx.o  -o cmTC_7f6d3 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6020e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6020e.dir/build.make CMakeFiles/cmTC_6020e.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6020e.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_6020e.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6020e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6020e.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_6020e.dir/feature_tests.cxx.o  -o cmTC_6020e 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -561,17 +561,17 @@ make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7ab0f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7ab0f.dir/build.make CMakeFiles/cmTC_7ab0f.dir/build
-make[1]: Entering directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7ab0f.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_7ab0f.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7ab0f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7ab0f.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_7ab0f.dir/feature_tests.cxx.o  -o cmTC_7ab0f 
-make[1]: Leaving directory '/mnt/c/Users/tvand/source/repos/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_4c3c5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4c3c5.dir/build.make CMakeFiles/cmTC_4c3c5.dir/build
+make[1]: Entering directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4c3c5.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_4c3c5.dir/feature_tests.cxx.o -c /mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_4c3c5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4c3c5.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_4c3c5.dir/feature_tests.cxx.o  -o cmTC_4c3c5 
+make[1]: Leaving directory '/mnt/c/Users/tvand/source/AESEncryption/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
