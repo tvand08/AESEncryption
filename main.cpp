@@ -1,17 +1,18 @@
 #include <iostream>
 #include <cstring>
+#include <ctime>
+#include <chrono>
 
 #include "constansts.h"
 #include "main.h"
 
 int main() {
-
     // 128 bit key = 16 bytes per key | 11 generated keys
     unsigned char key[16 * 11];
     unsigned char text[16] = {0};
-    unsigned char result[2560] = {0};
+    unsigned char result[2560000] = {0};
     char key_input[17];
-    char msg_input[2561] ={'='};
+    char msg_input[2560001] ={'='};
 
     // Read key into key input
     std::cout << "Enter a key with which you would like to encrypt the message (16 characters)" ;
@@ -24,12 +25,17 @@ int main() {
 
     // Read the message into the message input
     std::cout<<"Enter a message to encrypt (max 256 characters)"<<std::endl;
-    std::cin.getline(msg_input,2561);
+    std::cin.getline(msg_input,2560001);
+
+    typedef std::chrono::high_resolution_clock Clock;
+    auto t1 = Clock::now();
 
     int message_length = 0;
     while(msg_input[message_length] != '\000'){ message_length++; }
 
     int num_blocks = (message_length / 16) + 1;
+    // Generate the round keys from the cipher key
+
 
     for(int j = 0; j < num_blocks; j++){
 
@@ -37,15 +43,10 @@ int main() {
         for(int i = (j*16); i < (j+1)*16; i++){
             text[i%16] = (unsigned char)msg_input[i];
         }
-
-
-        // Generate the round keys from the cipher key
+        //Begin encryption
         for(int i = 0; i< 10; i++){
             generate_roundkey(key,i);
         }
-
-        //Begin encryption
-
         // Add cipher key to cipher text
         exclusive_or(text , &key[0], 16);
 
@@ -75,9 +76,10 @@ int main() {
         for(int i = (j*16); i < (j+1)*16; i++){
             result[i] = text[i%16];
         }
-        std::cout<<"Encrypting Block "<<j<<std::endl;
-        print_hex(text,16);
     }
+
+    auto t2 = Clock::now();
+    std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<std::endl;
 
     // Print out the finalized cipher text
     print_hex(result,num_blocks*16);
