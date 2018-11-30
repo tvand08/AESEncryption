@@ -79,7 +79,7 @@ int main() {
     }
 
     auto t2 = Clock::now();
-    std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<std::endl;
+    std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
 
     // Print out the finalized cipher text
     print_hex(result,num_blocks*16);
