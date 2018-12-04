@@ -80,7 +80,6 @@ int main(int argc, char* argv[]) {
         for(int i = (j*16); i < (j+1)*16; i++){
             text[i%16] = (unsigned char)msg_input[start + i];
         }
-        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : a"<<std::endl;
         // Add cipher key to cipher text
         exclusive_or(text , &key[0], 16);
         /* Perform the 9 rounds of encryption
@@ -98,7 +97,6 @@ int main(int argc, char* argv[]) {
            enc_mix_columns(text);
            exclusive_or(text, &key[i*16],16);
         }
-        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : b"<<std::endl;
 
         // Sub the bytes with the s-box
         enc_sub_bytes(text);
@@ -109,32 +107,35 @@ int main(int argc, char* argv[]) {
         // Add the final round key to the cipher text
         exclusive_or(text, &key[10*16], 16);
         process_result[rounds_per_process*16] = (unsigned char)my_rank;
-        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : c"<<std::endl;
 
 
         for(int i = (j*16); i < (j+1)*16; i++){
             process_result[i] = text[i%16];
         }
-        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : d"<<std::endl;
         
     }
 
     if(my_rank != 0){
-        char       greeting[42];
-        sprintf(greeting, "hi");
-        std::cout<<"Sending"<<std::endl;
-        MPI_Send(greeting, strlen(greeting)+1, MPI_CHAR, 0, 1,MPI_COMM_WORLD);         // MPI_Send(process_result,(rounds_per_process*16) + 1,MPI_UNSIGNED_CHAR,my_rank,0,MPI_COMM_WORLD);
+        MPI_Send(process_result,(rounds_per_process*16) + 1,MPI_UNSIGNED_CHAR,0,1,MPI_COMM_WORLD);
         
     }else{
+        for(int i = 0; i < rounds_per_process*16; i++){
+            result[i] = process_result[i];
+        }
         for(int q = 1; q < comm_sz; q++){
             unsigned char rcv[(rounds_per_process*16)*2] = {0};
             char       greeting[42];
             
-            std::cout<<"Waiting for "<<q<<std::endl;
-            MPI_Recv(greeting, 42, MPI_CHAR, q, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-            // MPI_Recv(rcv, (rounds_per_process*16)*2,MPI_UNSIGNED_CHAR,q,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
-            std::cout<<"Recieved: "<<std::endl;
+            MPI_Recv(rcv, (rounds_per_process*16)*2,MPI_UNSIGNED_CHAR,q,1,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            int start;
+            if(q < remaining){
+                start = my_rank * rounds_per_process;
+            }else{
+                start = (my_rank * (rounds_per_process - 1)) + remaining;
+            }
         }
+    
+        print_hex(result,num_blocks*16);
     }
 
     MPI_Finalize(); 
@@ -143,7 +144,6 @@ int main(int argc, char* argv[]) {
     //std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
 
     // Print out the finalized cipher text
-    print_hex(result,num_blocks*16);
 }
 
 // Shared methods
