@@ -48,8 +48,9 @@ int main(int argc, char* argv[]) {
         key[i] = (unsigned char)key_input[i];
     }
 
-    //typedef std::chrono::high_resolution_clock Clock;
-    //auto t1 = Clock::now();
+
+    typedef std::chrono::high_resolution_clock Clock;
+    auto t1 = Clock::now();
 
     int message_length = 0;
     while(msg_input[message_length] != '\000'){ message_length++; }
@@ -74,7 +75,6 @@ int main(int argc, char* argv[]) {
         start = (my_rank * rounds_per_process) + remaining;
     }
     for(int j = 0; j < rounds_per_process ; j++){
-        //std::cout<<"Process #"<<my_rank<<" started round #"<<j<<" from "<<start<<" to "<<start+rounds_per_process<<std::endl;
 
         // Move the current message into the unsigned char array
         for(int i = (j*16); i < (j+1)*16; i++){
@@ -128,21 +128,28 @@ int main(int argc, char* argv[]) {
             
             MPI_Recv(rcv, (rounds_per_process*16)*2,MPI_UNSIGNED_CHAR,q,1,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
             int start;
-            if(q < remaining){
-                start = my_rank * rounds_per_process;
+            if(q < remaining || remaining == 0 ){
+                start = q * rounds_per_process * 16;
+                for(int i = 0 ; i< rounds_per_process*16; i++){
+                    result[start + i] = rcv[i];
+                }
             }else{
-                start = (my_rank * (rounds_per_process - 1)) + remaining;
+                start = ((q * (rounds_per_process - 1)) + remaining) * 16;
+                for(int i = 0 ; i< (rounds_per_process-1)*16; i++){
+                    result[start + i] = rcv[i];
+                }
             }
+            
         }
-    
+        auto t2 = Clock::now();
+        std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
+
         print_hex(result,num_blocks*16);
     }
 
     MPI_Finalize(); 
 
-   // auto t2 = Clock::now();
-    //std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
-
+    
     // Print out the finalized cipher text
 }
 
