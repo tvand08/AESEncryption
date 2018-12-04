@@ -120,16 +120,18 @@ int main(int argc, char* argv[]) {
     }
 
     if(my_rank != 0){
-        int x = 4;
-        MPI_Send(&x, 1,MPI_INT,my_rank,0,MPI_COMM_WORLD);
-        // MPI_Send(process_result,(rounds_per_process*16) + 1,MPI_UNSIGNED_CHAR,my_rank,0,MPI_COMM_WORLD);
+        char       greeting[42];
+        sprintf(greeting, "hi");
+        std::cout<<"Sending"<<std::endl;
+        MPI_Send(greeting, strlen(greeting)+1, MPI_CHAR, 0, 1,MPI_COMM_WORLD);         // MPI_Send(process_result,(rounds_per_process*16) + 1,MPI_UNSIGNED_CHAR,my_rank,0,MPI_COMM_WORLD);
         
     }else{
         for(int q = 1; q < comm_sz; q++){
             unsigned char rcv[(rounds_per_process*16)*2] = {0};
-            int x;
+            char       greeting[42];
+            
             std::cout<<"Waiting for "<<q<<std::endl;
-            MPI_Recv(&x,1,MPI_INT,q,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            MPI_Recv(greeting, 42, MPI_CHAR, q, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
             // MPI_Recv(rcv, (rounds_per_process*16)*2,MPI_UNSIGNED_CHAR,q,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
             std::cout<<"Recieved: "<<std::endl;
         }
