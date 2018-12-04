@@ -12,10 +12,13 @@ int main(int argc, char* argv[]) {
     // 128 bit key = 16 bytes per key | 11 generated keys
     unsigned char key[16 * 11];
     unsigned char result[2560000] = {0};
+    typedef std::chrono::high_resolution_clock Clock;    
     char key_input[17];
     char msg_input[2560001] ={'='};
     int        comm_sz;               /* Number of processes    */
     int        my_rank;               /* My process rank        */
+
+    auto time_1_start = Clock::now();
 
     MPI_Init(NULL,NULL);
 
@@ -32,10 +35,10 @@ int main(int argc, char* argv[]) {
         strcpy(msg_input,contents.c_str());
 
         for(int i = 1; i< comm_sz; i++){
-            MPI_Send(msg_input,256001,MPI_CHAR,i,0,MPI_COMM_WORLD);
+            MPI_Send(msg_input,2560001,MPI_CHAR,i,0,MPI_COMM_WORLD);
         }
     }else{
-        MPI_Recv(msg_input,256001,MPI_CHAR,0,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+        MPI_Recv(msg_input,2560001,MPI_CHAR,0,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
     }
     // Read key into key input
     std::ifstream inkey("key.txt");
@@ -48,9 +51,13 @@ int main(int argc, char* argv[]) {
         key[i] = (unsigned char)key_input[i];
     }
 
+    if(my_rank == 0){
+        auto time_1_end = Clock::now();
+        std::cout<<"Irrelevent time: "<<std::chrono::duration_cast<std::chrono::nanoseconds>(time_1_end - time_1_start).count()<<" Nanoseconds"<<std::endl;
+    }
 
-    typedef std::chrono::high_resolution_clock Clock;
-    auto t1 = Clock::now();
+
+    auto time_2_start = Clock::now();
 
     int message_length = 0;
     while(msg_input[message_length] != '\000'){ message_length++; }
@@ -141,16 +148,14 @@ int main(int argc, char* argv[]) {
             }
             
         }
-        auto t2 = Clock::now();
-        std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
-
         print_hex(result,num_blocks*16);
+        
+        auto time_2_end = Clock::now();
+        std::cout<<"Relevent: "<<std::chrono::duration_cast<std::chrono::nanoseconds>(time_2_end - time_2_start).count()<<" Nanoseconds"<<std::endl;
+
     }
 
     MPI_Finalize(); 
-
-    
-    // Print out the finalized cipher text
 }
 
 // Shared methods
