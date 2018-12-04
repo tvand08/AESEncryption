@@ -3,56 +3,86 @@
 #include <ctime>
 #include <chrono>
 #include <mpi.h>
+#include <fstream> 
 
 #include "constansts.h"
 #include "main.h"
 
-int main() {
+int main(int argc, char* argv[]) {
     // 128 bit key = 16 bytes per key | 11 generated keys
     unsigned char key[16 * 11];
-    unsigned char text[16] = {0};
     unsigned char result[2560000] = {0};
     char key_input[17];
     char msg_input[2560001] ={'='};
     int        comm_sz;               /* Number of processes    */
     int        my_rank;               /* My process rank        */
 
-    // Read key into key input
-    std::cout << "Enter a key with which you would like to encrypt the message (16 characters)" ;
-    std::cin.getline(key_input,17);
+    MPI_Init(NULL,NULL);
 
-    // Move the key text into the first section of the key
+    MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+
+
+    if(my_rank == 0){
+        // Read the message into the message input
+        std::ifstream in("input.txt");
+        std::string contents((std::istreambuf_iterator<char>(in)), 
+            std::istreambuf_iterator<char>());
+        strcpy(msg_input,contents.c_str());
+
+        for(int i = 1; i< comm_sz; i++){
+            MPI_Send(msg_input,256001,MPI_CHAR,i,0,MPI_COMM_WORLD);
+        }
+    }else{
+        MPI_Recv(msg_input,256001,MPI_CHAR,0,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+    }
+    // Read key into key input
+    std::ifstream inkey("key.txt");
+    std::string keystring((std::istreambuf_iterator<char>(inkey)), 
+        std::istreambuf_iterator<char>());
+    strcpy(key_input,keystring.c_str());
+
+     // Move the key text into the first section of the key
     for(int i = 0; i < 16; i++){
         key[i] = (unsigned char)key_input[i];
     }
 
-    // Read the message into the message input
-    std::cout<<"Enter a message to encrypt (max 256 characters)"<<std::endl;
-    std::cin.getline(msg_input,2560001);
-
-    typedef std::chrono::high_resolution_clock Clock;
-    auto t1 = Clock::now();
+    //typedef std::chrono::high_resolution_clock Clock;
+    //auto t1 = Clock::now();
 
     int message_length = 0;
     while(msg_input[message_length] != '\000'){ message_length++; }
 
     int num_blocks = (message_length / 16) + 1;
     // Generate the round keys from the cipher key
+     //Begin encryption
+    for(int i = 0; i< 10; i++){
+        generate_roundkey(key,i);
+    }
+    
+    int rounds_per_process = num_blocks / comm_sz;
+    int remaining = num_blocks % comm_sz;
+    unsigned char process_result[(rounds_per_process*16) + 1];
+    unsigned char text[16] = {0};
 
-    MPI_Init(NULL,NULL);
-    for(int j = 0; j < num_blocks; j++){
+    int start;
+    if(my_rank < remaining){
+        rounds_per_process++;
+        start = my_rank * rounds_per_process;
+    }else{
+        start = (my_rank * rounds_per_process) + remaining;
+    }
+    for(int j = 0; j < rounds_per_process ; j++){
+        //std::cout<<"Process #"<<my_rank<<" started round #"<<j<<" from "<<start<<" to "<<start+rounds_per_process<<std::endl;
 
         // Move the current message into the unsigned char array
         for(int i = (j*16); i < (j+1)*16; i++){
-            text[i%16] = (unsigned char)msg_input[i];
+            text[i%16] = (unsigned char)msg_input[start + i];
         }
-        //Begin encryption
-        for(int i = 0; i< 10; i++){
-            generate_roundkey(key,i);
-        }
+        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : a"<<std::endl;
         // Add cipher key to cipher text
         exclusive_or(text , &key[0], 16);
-
         /* Perform the 9 rounds of encryption
          * For each round algorithm will
          * 1. Sub out the bytes using the Rijndael s-box
@@ -68,21 +98,47 @@ int main() {
            enc_mix_columns(text);
            exclusive_or(text, &key[i*16],16);
         }
+        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : b"<<std::endl;
 
         // Sub the bytes with the s-box
         enc_sub_bytes(text);
+
         // Shift the rows once more
         enc_shift_rows(text);
+
         // Add the final round key to the cipher text
         exclusive_or(text, &key[10*16], 16);
+        process_result[rounds_per_process*16] = (unsigned char)my_rank;
+        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : c"<<std::endl;
+
 
         for(int i = (j*16); i < (j+1)*16; i++){
-            result[i] = text[i%16];
+            process_result[i] = text[i%16];
+        }
+        std::cout<<my_rank<<" : " <<j <<" of "<<rounds_per_process<<" "<<start+j<< " : d"<<std::endl;
+        
+    }
+
+    if(my_rank != 0){
+        int x = 4;
+        MPI_Send(&x, 1,MPI_INT,my_rank,0,MPI_COMM_WORLD);
+        // MPI_Send(process_result,(rounds_per_process*16) + 1,MPI_UNSIGNED_CHAR,my_rank,0,MPI_COMM_WORLD);
+        
+    }else{
+        for(int q = 1; q < comm_sz; q++){
+            unsigned char rcv[(rounds_per_process*16)*2] = {0};
+            int x;
+            std::cout<<"Waiting for "<<q<<std::endl;
+            MPI_Recv(&x,1,MPI_INT,q,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            // MPI_Recv(rcv, (rounds_per_process*16)*2,MPI_UNSIGNED_CHAR,q,0,MPI_COMM_WORLD,MPI_STATUS_IGNORE);
+            std::cout<<"Recieved: "<<std::endl;
         }
     }
 
-    auto t2 = Clock::now();
-    std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
+    MPI_Finalize(); 
+
+   // auto t2 = Clock::now();
+    //std::cout<< std::chrono::duration_cast<std::chrono::nanoseconds>(t2-t1).count()<<" Nanoseconds"<<std::endl;
 
     // Print out the finalized cipher text
     print_hex(result,num_blocks*16);
