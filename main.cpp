@@ -2,6 +2,7 @@
 #include <cstring>
 #include <ctime>
 #include <chrono>
+#include <mpi.h>
 
 #include "constansts.h"
 #include "main.h"
@@ -13,6 +14,8 @@ int main() {
     unsigned char result[2560000] = {0};
     char key_input[17];
     char msg_input[2560001] ={'='};
+    int        comm_sz;               /* Number of processes    */
+    int        my_rank;               /* My process rank        */
 
     // Read key into key input
     std::cout << "Enter a key with which you would like to encrypt the message (16 characters)" ;
@@ -36,7 +39,7 @@ int main() {
     int num_blocks = (message_length / 16) + 1;
     // Generate the round keys from the cipher key
 
-
+    MPI_Init(NULL,NULL);
     for(int j = 0; j < num_blocks; j++){
 
         // Move the current message into the unsigned char array

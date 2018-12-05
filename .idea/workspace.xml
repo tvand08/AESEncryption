@@ -2,10 +2,10 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/constansts.h" line="45" />
-    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="203" />
-    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="194" />
+    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="206" />
+    <bookmark url="file://$PROJECT_DIR$/main.cpp" line="197" />
   </component>
-  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="AESEncryption" targetName="AESEncryption" />
     </generated>
@@ -17,6 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea6183fa-1089-4543-b4b9-bb3c799447e4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -27,70 +28,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
-  <component name="FUSProjectUsageTrigger">
-    <session id="1747302074">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="8" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="3" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.27" value="1" />
-          <entry key="project.opened" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cpp" value="10194" />
-          <entry key="h" value="520" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="ObjectiveC" value="10714" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="AESEncryption" value="1" />
-          <entry key="AESEncryption (disassembly)" value="3" />
-          <entry key="cpp" value="1" />
-          <entry key="h" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Disassembly" value="3" />
-          <entry key="ObjectiveC" value="4" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-758288722">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="cpp" value="137" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="ObjectiveC" value="137" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="81" column="101" selection-start-line="81" selection-start-column="101" selection-end-line="81" selection-end-column="101" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="252">
+              <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -98,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/constansts.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
+            <state relative-caret-position="535">
               <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
             </state>
           </provider>
@@ -135,12 +79,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="2873" />
     <option name="width" value="974" />
@@ -152,6 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,7 +106,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +166,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61160000" />
+    <option name="totallyTimeSpent" value="61466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -240,10 +178,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2873" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.021881837" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31716418" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -257,7 +194,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="CMake" order="11" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3263965" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -267,9 +204,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -292,7 +226,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/constansts.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
+        <state relative-caret-position="535">
           <caret line="55" column="30" selection-start-line="55" selection-start-column="30" selection-end-line="55" selection-end-column="30" />
         </state>
       </provider>
@@ -306,11 +240,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="81" column="101" selection-start-line="81" selection-start-column="101" selection-end-line="81" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="252">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
         </state>
       </provider>
     </entry>
